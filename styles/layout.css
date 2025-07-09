@@ -1,0 +1,17 @@
+/* Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  height: 6rem;
+  align-items: center;
+  box-shadow: -1px 1px 7px 0px var(--text);
+  /* border-radius: 1rem; */
+  /* border-bottom: 2px solid black; */
+
+}
+
+.nav-logo{
+    font-weight: var(--font-weight-bold);
+}
+

@@ -1,0 +1,8 @@
+/* Butttons */
+.btn{
+    padding: 1rem;
+    color: var(--text);
+    background-color: var(--secondary);
+    
+    border-radius: 1rem;
+}

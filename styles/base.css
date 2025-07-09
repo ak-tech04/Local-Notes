@@ -1,0 +1,39 @@
+:root {
+  /* Font Weight */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* font family */
+  --font-family: "Roboto", "sans-serif";
+}
+:root[data-theme="light"] {
+  --text: hsl(0, 2%, 10%);
+  --background: hsl(146, 100%, 97%);
+  --primary: hsl(149, 100%, 50%);
+  --secondary: hsl(225, 100%, 74%);
+  --accent: hsl(246, 100%, 64%);
+}
+:root[data-theme="dark"] {
+  --text: hsl(143, 100%, 93%);
+  --background: hsl(148, 100%, 3%);
+  --primary: hsl(149, 100%, 50%);
+  --secondary: hsl(225, 100%, 26%);
+  --accent: hsl(246, 100%, 36%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  color: var(--text);
+  background-color: var(--background);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family);
+}
+body {
+}
