@@ -13,27 +13,33 @@
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/layout.css" />
     <link rel="stylesheet" href="styles/component.css" />
-    <script src="scripts/base.js" defer></script>
+    <script type="module" src="scripts/onload.js" defer ></script>
+    <!-- <script src="scripts/app.js" defer></script> -->
+    <!-- <script src="scripts/base.js" defer></script> -->
   </head>
   <body>
     <header>
       <h1 class="nav-logo">Local Notes</h1>
       <div class="nav-btn">
-        <button class="btn add-note-btn">+ Add Notes</button>
-        <button class="btn theme-toggle-btn">🌞</button>
+        <button class="btn add-note-btn primary-btn">+ Add Notes</button>
+        <button class="btn theme-toggle-btn secondary-btn">🌞</button>
       </div>
     </header>
     <main class="notes-container"></main>
+
+    <!-- <div class="dialog-container">
+
+    </div> -->
     <dialog class="note-dialog">
       <div class="dialog-content">
         <div class="dialog-header">
           <h2 class="dialog-title">Add New Note</h2>
-          <button class="close-btn">x</button>
+          <button class="btn close-btn">x</button>
         </div>
 
         <form action="#" class="note-form">
           <div class="form-group">
-            <label for="noteTitle">Title</label>
+            <label for="noteTitle" class="form-label">Title</label>
             <input
               type="text"
               id="noteTitle"
@@ -46,14 +52,16 @@
             <label for="noteContent" class="form-label">Content</label>
             <textarea
               id="noteContent"
-              class="form-textarea"
+              class="form-input form-textarea"
               placeholder="Write your note here...."
               required
             ></textarea>
           </div>
           <div class="dialog-action">
-            <button type="button" class="cancel-btn" >cancel</button>
-            <button type="submit" class="save-btn">save</button>
+            <button type="button" class="btn cancel-btn secondary-btn">
+              cancel
+            </button>
+            <button type="submit" class="btn save-btn primary-btn">save</button>
           </div>
         </form>
       </div>

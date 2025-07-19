@@ -8,10 +8,39 @@ header {
   box-shadow: -1px 1px 7px 0px var(--text);
   /* border-radius: 1rem; */
   /* border-bottom: 2px solid black; */
-
 }
 
-.nav-logo{
-    font-weight: var(--font-weight-bold);
+.nav-logo {
+  /* font-weight: var(--font-weight-bold);
+    margin-bottom: 0; */
+
+  font-family: "Montserrat", "Poppins", "Segoe UI", Arial, sans-serif;
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(--font-size-2xl, 3rem); /* or tweak as needed */
+  color: var(--primary, #2c7be5);
+  margin-bottom: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    var(--primary, #2c7be5) 60%,
+    var(--accent, #6f42c1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  /* Optional text-shadow for depth */
+  text-shadow: 0 2px 8px rgba(44, 123, 229, 0.06);
+  transition: color 0.2s;
 }
 
+/* note container  */
+.notes-container{
+  display: flex;
+  margin: 3rem 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  /* flex-basis: ; */
+}
