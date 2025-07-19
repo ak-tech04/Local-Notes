@@ -139,7 +139,7 @@
 /* note card  */
 .note-card {
   height: 30rem;
-  width: 20rem;
+  width: 30rem;
   overflow-y: auto;
   scrollbar-width: none;
   /* overflow-x: hidden; */
@@ -152,6 +152,7 @@
   max-width: 100%;
   transition: box-shadow 0.18s, background 0.2s;
   border: 1.5px solid var(--accent, #E040FB);
+  text-align: center;
 }
 
 .note-card-title {
@@ -159,6 +160,7 @@
   font-weight: var(--font-weight-bold, 700);
   color: var(--primary, #3F51B5);
   margin-bottom: 1.2rem;
+  /* text-align: center; */
   word-break: break-word;
 }
 
@@ -168,5 +170,6 @@
   color: var(--text, #23272F);
   line-height: var(--line-height-normal, 1.5);
   word-break: break-word;
+  /* text-align: center; */
 }
 

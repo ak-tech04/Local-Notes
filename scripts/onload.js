@@ -36,7 +36,7 @@ function theme() {
     themeToggleBtn.innerHTML = "🌞";
   }
   html.setAttribute("data-theme", theme);
-  
+
   themeToggleBtn.addEventListener("click", (e) => {
     let theme = localStorage.getItem("theme");
     let html = document.querySelector("html");
@@ -89,7 +89,7 @@ function saveNote(noteTitle, noteText) {
     title: noteTitle,
     text: noteText,
   };
-  
+
   note.push(noteObj);
   localStorage.setItem("myNotes", JSON.stringify(note));
   renderNotes(noteObj);
@@ -97,7 +97,7 @@ function saveNote(noteTitle, noteText) {
 // Requires note obj to render
 function renderNotes(note) {
   let notesContainer = document.querySelector(".notes-container");
-  
+
   let noteCard = document.createElement("div");
   noteCard.classList.add("note-card");
   noteCard.innerHTML = `
@@ -111,11 +111,18 @@ function renderNotes(note) {
 function renderNull() {
   let notesContainer = document.querySelector(".notes-container");
   let noteCard = document.createElement("div");
-  noteCard.classList.add("noteCard");
+  noteCard.classList.add("note-card");
   noteCard.innerHTML = `
-        <h2>Empty </h2>
-        <p>Add your notes here </p>
+        <h2 class='note-card-title'>No Notes Available </h2>
         `;
+  let button = document.createElement("button");
+  button.innerText = "Add your notes here...";
+  button.classList.add("btn", "primary-btn");
+  noteCard.appendChild(button);
+
   notesContainer.appendChild(noteCard);
+  button.addEventListener("click", openNoteDialog);
+
+
   return;
 }
